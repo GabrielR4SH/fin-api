@@ -1,4 +1,4 @@
-FROM node:14.15.4-alpine3.12
+FROM node:16.14.0-alpine3.15
 
 RUN apk add --no-cache bash
 
@@ -12,3 +12,5 @@ RUN npm install -g @nestjs/cli@10.0.0
 USER node
 
 WORKDIR /home/node/app
+
+CMD ["npm", "run", "start:dev"]
